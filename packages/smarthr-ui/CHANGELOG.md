@@ -2,6 +2,104 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [96.0.0](https://github.com/se4weed/smarthr-ui/compare/smarthr-ui-v95.0.0...smarthr-ui-v96.0.0) (2026-05-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* **LanguageSwitcher,AppLauncher:** decorators属性を削除 ([#6233](https://github.com/se4weed/smarthr-ui/issues/6233))
+* **InputFile:** decorators属性を削除しIntlProviderのみを使用 ([#6234](https://github.com/se4weed/smarthr-ui/issues/6234))
+* FormDialogのボタン属性をObject形式に統合 ([#6229](https://github.com/se4weed/smarthr-ui/issues/6229))
+* MessageDialogのdecorators削除とcloseButton属性への統一 ([#6230](https://github.com/se4weed/smarthr-ui/issues/6230))
+* ActionDialogのボタン属性をObject形式に統合 ([#6228](https://github.com/se4weed/smarthr-ui/issues/6228))
+* **ThCheckbox:** decorators属性を削除しIntlProviderのみを使用 ([#6235](https://github.com/se4weed/smarthr-ui/issues/6235))
+* **DropZone:** decorators属性を削除しIntlProviderのみを使用 ([#6236](https://github.com/se4weed/smarthr-ui/issues/6236))
+* **Combobox:** decorators属性を削除しIntlProviderのみを使用 ([#6238](https://github.com/se4weed/smarthr-ui/issues/6238))
+* RemoteTriggerダイアログのプレフィックスを削除して推奨版として提供 ([#6196](https://github.com/se4weed/smarthr-ui/issues/6196))
+* **SearchInput:** decorators属性を削除しIntlProviderのみを使用 ([#6237](https://github.com/se4weed/smarthr-ui/issues/6237))
+* **Textarea:** decorators属性を削除 ([#6232](https://github.com/se4weed/smarthr-ui/issues/6232))
+* コンポーネントサイズ指定を大文字に統一 ([#6239](https://github.com/se4weed/smarthr-ui/issues/6239))
+* **InformationPanel:** decorators属性を削除 ([#6231](https://github.com/se4weed/smarthr-ui/issues/6231))
+* Dialog* コンポーネントを ControlledDialog* に変更 ([#6195](https://github.com/se4weed/smarthr-ui/issues/6195))
+* **StepFormDialog:** キャンセル・次へ・戻る・submitボタンの設定をstep毎に分岐できるようにする ([#6157](https://github.com/se4weed/smarthr-ui/issues/6157))
+* **ResponseMessage,Heading,FormControl,Fieldset:** ResponseMessageの意図外の利用を阻止するため、iconGap属性を削除 & 必要な箇所でiconとテキストの間隔を調整できるようにする ([#5981](https://github.com/se4weed/smarthr-ui/issues/5981))
+* barrel fileの明示的export化 ([#6217](https://github.com/se4weed/smarthr-ui/issues/6217))
+* AppHeader から arbitraryDisplayName props を削除 ([#6183](https://github.com/se4weed/smarthr-ui/issues/6183))
+* **Select:** hasBlankのデフォルトの選択肢を空にする ([#6189](https://github.com/se4weed/smarthr-ui/issues/6189))
+* **ModelessDialog:** VOがドラッグハンドルを読み上げる時、適切じゃない案内をされます ([#6173](https://github.com/se4weed/smarthr-ui/issues/6173))
+* フォーカスインジケータをデフォルト内側に表示する ([#6010](https://github.com/se4weed/smarthr-ui/issues/6010))
+* **FormDialog,ActionDialog:** onSubmit/onClickActionのコールバックインターフェースを変更 ([#6024](https://github.com/se4weed/smarthr-ui/issues/6024))
+* **StepFormDialog:** onSubmitの内部の自由度を向上 ([#5914](https://github.com/se4weed/smarthr-ui/issues/5914))
+
+### Features
+
+* Base[overflow="hidden"]を使わずとも角丸を実現できるよう、各コンポーネントにrounded属性を追加する ([#6181](https://github.com/se4weed/smarthr-ui/issues/6181)) ([28d1227](https://github.com/se4weed/smarthr-ui/commit/28d122745ca76c828e60570365cff49921f2ad94))
+* **BulkActionRow:** BulkActionRow内にButton[variant="tertiary"]がある場合コントラスト比を上げるスタイル追加 ([#6285](https://github.com/se4weed/smarthr-ui/issues/6285)) ([f9fb34a](https://github.com/se4weed/smarthr-ui/commit/f9fb34a3e47302b059f39b7a97b2890fe21246fe))
+* export/import パターンの制限ルール追加 ([#6219](https://github.com/se4weed/smarthr-ui/issues/6219)) ([d2d8229](https://github.com/se4weed/smarthr-ui/commit/d2d82299089619b8a57576b8015fa305cf1ed584))
+* FaCirclePlayIconを追加 ([#6272](https://github.com/se4weed/smarthr-ui/issues/6272)) ([0d96e81](https://github.com/se4weed/smarthr-ui/commit/0d96e8191ef1b23f339530d432a2964806d733df))
+* **FormDialog,ActionDialog:** onSubmit/onClickActionのコールバックインターフェースを変更 ([#6024](https://github.com/se4weed/smarthr-ui/issues/6024)) ([fd7a303](https://github.com/se4weed/smarthr-ui/commit/fd7a303d8cd5dd39717c8c662eb9d25b65e2d99c))
+* **ResponseMessage,Heading,FormControl,Fieldset:** ResponseMessageの意図外の利用を阻止するため、iconGap属性を削除 & 必要な箇所でiconとテキストの間隔を調整できるようにする ([#5981](https://github.com/se4weed/smarthr-ui/issues/5981)) ([a7d03d9](https://github.com/se4weed/smarthr-ui/commit/a7d03d9dfb9e7cfa66bfc0d57fb5c390f8d3905c))
+* Scrollerコンポーネントを定義 ([#6187](https://github.com/se4weed/smarthr-ui/issues/6187)) ([bb10eea](https://github.com/se4weed/smarthr-ui/commit/bb10eeae52b5214bee91eefbde42b6181977a963))
+* **SingleCombobox, MultipleCombobox:** 選択肢を選んだ際、onChangeInputを空文字で発火する処理を追加 ([#6191](https://github.com/se4weed/smarthr-ui/issues/6191)) ([e964ad4](https://github.com/se4weed/smarthr-ui/commit/e964ad4b1183ed63d35d07739d10e7d6652b5841))
+* **StepFormDialog:** onSubmitの内部の自由度を向上 ([#5914](https://github.com/se4weed/smarthr-ui/issues/5914)) ([e11f684](https://github.com/se4weed/smarthr-ui/commit/e11f68456209c145de26564d2ed2604e1ccd1f81))
+* **StepFormDialog:** キャンセル・次へ・戻る・submitボタンの設定をstep毎に分岐できるようにする ([#6157](https://github.com/se4weed/smarthr-ui/issues/6157)) ([2c2731d](https://github.com/se4weed/smarthr-ui/commit/2c2731dc97f179de9da572e4d7632f4d5a0db6b7))
+* **Text:** maxLines属性を追加する ([#6058](https://github.com/se4weed/smarthr-ui/issues/6058)) ([1209cbe](https://github.com/se4weed/smarthr-ui/commit/1209cbe73c9d7f046de63a0154c0ca75ceadc352))
+* **Th:** デフォルトでwhite-space: nowrapを設定する ([#6119](https://github.com/se4weed/smarthr-ui/issues/6119)) ([49d7664](https://github.com/se4weed/smarthr-ui/commit/49d766483d52481ad1e30bfe4f0644c83b1f998b))
+* **TimeFormatter, TimestampFormatter:** 時間とタイムスタンプを言語に合った形式に変換できるようにしたい ([#6013](https://github.com/se4weed/smarthr-ui/issues/6013)) ([e6ea561](https://github.com/se4weed/smarthr-ui/commit/e6ea561e2d590740bade2f4de1ce9fd690838e3c))
+* リリースノートリンクからReferrer情報を送信できるように修正 ([#6115](https://github.com/se4weed/smarthr-ui/issues/6115)) ([11f7f9b](https://github.com/se4weed/smarthr-ui/commit/11f7f9b0544f572abf2b1a8ad84d7f93fae279f7))
+* 各種エラー画面を追加 ([#6274](https://github.com/se4weed/smarthr-ui/issues/6274)) ([893bcce](https://github.com/se4weed/smarthr-ui/commit/893bcceffe5db1ff86f8765c12bfb57e8434b86e))
+
+
+### Bug Fixes
+
+* AccordionPanelのrounded cornersが表示されない問題を修正 ([#6227](https://github.com/se4weed/smarthr-ui/issues/6227)) ([6accfc6](https://github.com/se4weed/smarthr-ui/commit/6accfc6a0c8307684b150ca078af337c9c1c9561))
+* AppHeader から arbitraryDisplayName props を削除 ([#6183](https://github.com/se4weed/smarthr-ui/issues/6183)) ([596659f](https://github.com/se4weed/smarthr-ui/commit/596659f49a69d8eb1798e215a50f9751beadd9ce))
+* AppLauncherのmain要素をdiv要素に置き換える ([#6190](https://github.com/se4weed/smarthr-ui/issues/6190)) ([7c942ac](https://github.com/se4weed/smarthr-ui/commit/7c942acacaae96144c77a7d5f62392902ade8e15))
+* **Balloon:** Tooltipの表示が他の要素の後ろにいかないように修正 ([#6243](https://github.com/se4weed/smarthr-ui/issues/6243)) ([b859cf0](https://github.com/se4weed/smarthr-ui/commit/b859cf0cf0bdac2fd03f0bc01e74c91c118ecb86))
+* **DisclosureTrigger:** なんの要素も出力していないかのように扱えるように調整する ([#6165](https://github.com/se4weed/smarthr-ui/issues/6165)) ([ecfa172](https://github.com/se4weed/smarthr-ui/commit/ecfa17226cf48d24465ea910031d8ad104160ef5))
+* **DropZone:** inputとButtonの両方にフォーカスが当たってしまうのを解消 ([#6242](https://github.com/se4weed/smarthr-ui/issues/6242)) ([c411761](https://github.com/se4weed/smarthr-ui/commit/c4117611a74a9f2dbdc7612d16c6722fc8963461))
+* **DropZone:** ファイル以外のドロップ時にonSelectFilesを呼ばないように修正 ([#6347](https://github.com/se4weed/smarthr-ui/issues/6347)) ([929dd94](https://github.com/se4weed/smarthr-ui/commit/929dd944450b2af46eb0d43fd76a125fcbd615a4))
+* **FileViewer:** PDFのrotateが考慮されないのを修正した ([#6202](https://github.com/se4weed/smarthr-ui/issues/6202)) ([6036368](https://github.com/se4weed/smarthr-ui/commit/6036368e355378b3dccd361c0521ebe0db6e6a51))
+* **Icon:** generateIconから'use client'を削除してサーバーコンポーネント対応 ([#6310](https://github.com/se4weed/smarthr-ui/issues/6310)) ([a0e4e31](https://github.com/se4weed/smarthr-ui/commit/a0e4e31d5fa5af326aa3b57f2b9befc327861927))
+* **Input,Picker:** BACKGROUNDの間違った使い方を修正 ([#6259](https://github.com/se4weed/smarthr-ui/issues/6259)) ([12a2312](https://github.com/se4weed/smarthr-ui/commit/12a23128f5a7771ade0855c228cb8772434c57b2))
+* **intl:** 日本語ロケールでdisableSlashInJa使用時のゼロ埋め問題を修正 ([#6186](https://github.com/se4weed/smarthr-ui/issues/6186)) ([139bc44](https://github.com/se4weed/smarthr-ui/commit/139bc44acee97ef890bbb45756492227b38a9dad))
+* Launcher の position を optional に変更 ([#6185](https://github.com/se4weed/smarthr-ui/issues/6185)) ([1439b67](https://github.com/se4weed/smarthr-ui/commit/1439b6744ac60352b59e18b5766dbb4e6358cdbb))
+* LineClampで短いテキストがw-fullによって意図せず引き伸ばされる問題を修正 ([#6220](https://github.com/se4weed/smarthr-ui/issues/6220)) ([d36f908](https://github.com/se4weed/smarthr-ui/commit/d36f908560f86059109be73a6b863bd0a83eaf40))
+* **ModelessDialog:** VOがドラッグハンドルを読み上げる時、適切じゃない案内をされます ([#6173](https://github.com/se4weed/smarthr-ui/issues/6173)) ([80f6327](https://github.com/se4weed/smarthr-ui/commit/80f63270062cf25e63eec624c4747a25031c8a52))
+* **ModelessDialog:** ダイアログヘッダのフォーカスリング修正 ([#6250](https://github.com/se4weed/smarthr-ui/issues/6250)) ([e630fc3](https://github.com/se4weed/smarthr-ui/commit/e630fc332d22c60550c3deca60250856c7589ed1))
+* **RadioButtonPanel:** onClick属性を正しく処理し二重実行を防止 ([#6327](https://github.com/se4weed/smarthr-ui/issues/6327)) ([1fc6239](https://github.com/se4weed/smarthr-ui/commit/1fc623914035ad99ee076e09d7c3b9f016594b98))
+* READMEにIntlProviderを追加 ([#6145](https://github.com/se4weed/smarthr-ui/issues/6145)) ([323778b](https://github.com/se4weed/smarthr-ui/commit/323778b2fefae364d4b7f0446bd404baa194c8d1))
+* **SegmentedControl/SideNav:** フォーカス中でフォーカスリングと選択中の要素を見分けれない ([#6291](https://github.com/se4weed/smarthr-ui/issues/6291)) ([199b030](https://github.com/se4weed/smarthr-ui/commit/199b030475f0da94b74608a1b03fc5dbcc5be7a3))
+* **Select:** hasBlankのデフォルトの選択肢を空にする ([#6189](https://github.com/se4weed/smarthr-ui/issues/6189)) ([e05e712](https://github.com/se4weed/smarthr-ui/commit/e05e712945961d5917331989d6aad6e88e031944))
+* sideEffectsにエントリポイントを追加しconfigureTwMergeが確実に実行されるようにする ([#6273](https://github.com/se4weed/smarthr-ui/issues/6273)) ([89023ba](https://github.com/se4weed/smarthr-ui/commit/89023ba0d8bfa801534a6693c769e9c714e26f7f))
+* SideNavItemAnchorをエクスポートに追加 ([#6199](https://github.com/se4weed/smarthr-ui/issues/6199)) ([235a93b](https://github.com/se4weed/smarthr-ui/commit/235a93b39c3f5ea13abca1ae4a48af9f1039febf))
+* **Table:** fixedHeadのテーブルコンポネントが縦スクロール出来なくなっている ([#6275](https://github.com/se4weed/smarthr-ui/issues/6275)) ([2971884](https://github.com/se4weed/smarthr-ui/commit/29718846b439da9af0fde195b6771d13ca394a21))
+* Tableコンポーネントにuse client を追加してサーバーコンポーネント内でも利用できるように修正 ([#6193](https://github.com/se4weed/smarthr-ui/issues/6193)) ([b121a04](https://github.com/se4weed/smarthr-ui/commit/b121a04f1db24bedf49dfd3f718cc8fd9fed126b))
+* **TimeFormatter,TimestampFormatter:** パッケージからexport ([#6349](https://github.com/se4weed/smarthr-ui/issues/6349)) ([ac67f95](https://github.com/se4weed/smarthr-ui/commit/ac67f959692238ff6cb9d0547ade766e67c497e5))
+* twMergeConfigの副作用がランタイムで実行されない問題を修正 ([#6254](https://github.com/se4weed/smarthr-ui/issues/6254)) ([c78e5fd](https://github.com/se4weed/smarthr-ui/commit/c78e5fdf36f332bd68cb981e0394cedfaceaca20))
+* useTheme()を使用しているファイルで'use client'してサーバーコンポーネント内でも利用できるように対応 ([#6290](https://github.com/se4weed/smarthr-ui/issues/6290)) ([847c70e](https://github.com/se4weed/smarthr-ui/commit/847c70ed9a6a6871d7637de054db5ecc098fdf0f))
+* エラー画面のexportを修正 ([#6305](https://github.com/se4weed/smarthr-ui/issues/6305)) ([50fd3be](https://github.com/se4weed/smarthr-ui/commit/50fd3bebf85d2b604e123b6c40a148e295c8260b))
+* フォーカスインジケータをデフォルト内側に表示する ([#6010](https://github.com/se4weed/smarthr-ui/issues/6010)) ([7abf656](https://github.com/se4weed/smarthr-ui/commit/7abf65677e5224e993017991a9e013d8efc44cbe))
+
+
+### Code Refactoring
+
+* ActionDialogのボタン属性をObject形式に統合 ([#6228](https://github.com/se4weed/smarthr-ui/issues/6228)) ([73eac60](https://github.com/se4weed/smarthr-ui/commit/73eac60b2eef4be18314a6fbc1c1f8597bafbd17))
+* barrel fileの明示的export化 ([#6217](https://github.com/se4weed/smarthr-ui/issues/6217)) ([52fcd4f](https://github.com/se4weed/smarthr-ui/commit/52fcd4f43043b21da2a750f4bcb2dedfd9d7f5d4))
+* **Combobox:** decorators属性を削除しIntlProviderのみを使用 ([#6238](https://github.com/se4weed/smarthr-ui/issues/6238)) ([bedf2b3](https://github.com/se4weed/smarthr-ui/commit/bedf2b3b978ee4ba091590a94805d4875487da58))
+* Dialog* コンポーネントを ControlledDialog* に変更 ([#6195](https://github.com/se4weed/smarthr-ui/issues/6195)) ([50c33b9](https://github.com/se4weed/smarthr-ui/commit/50c33b90992e7a0f7a83ea7dbb5a2a8ff0efe64b))
+* **DropZone:** decorators属性を削除しIntlProviderのみを使用 ([#6236](https://github.com/se4weed/smarthr-ui/issues/6236)) ([00d7ac8](https://github.com/se4weed/smarthr-ui/commit/00d7ac8b8a905a77d0ac8d970569431bcb59d1f1))
+* FormDialogのボタン属性をObject形式に統合 ([#6229](https://github.com/se4weed/smarthr-ui/issues/6229)) ([d4ef841](https://github.com/se4weed/smarthr-ui/commit/d4ef8410fe0104285e152cd9f0941f12bad4ee35))
+* **InformationPanel:** decorators属性を削除 ([#6231](https://github.com/se4weed/smarthr-ui/issues/6231)) ([ca621c8](https://github.com/se4weed/smarthr-ui/commit/ca621c865bf605abbc70e68de50a5bf266e4d1cf))
+* **InputFile:** decorators属性を削除しIntlProviderのみを使用 ([#6234](https://github.com/se4weed/smarthr-ui/issues/6234)) ([13bfdd4](https://github.com/se4weed/smarthr-ui/commit/13bfdd4691e0e35aae36cb30ced68f25e3e094ba))
+* **LanguageSwitcher,AppLauncher:** decorators属性を削除 ([#6233](https://github.com/se4weed/smarthr-ui/issues/6233)) ([ab0b636](https://github.com/se4weed/smarthr-ui/commit/ab0b63690fbbdcb4f1572949a73d90a0c4c164b2))
+* MessageDialogのdecorators削除とcloseButton属性への統一 ([#6230](https://github.com/se4weed/smarthr-ui/issues/6230)) ([ff5dd30](https://github.com/se4weed/smarthr-ui/commit/ff5dd30662f0d26047ed0807217ee6cca1e24e50))
+* RemoteTriggerダイアログのプレフィックスを削除して推奨版として提供 ([#6196](https://github.com/se4weed/smarthr-ui/issues/6196)) ([c652930](https://github.com/se4weed/smarthr-ui/commit/c652930ce59060e5437dca8654d37a5b49cda8d1))
+* **SearchInput:** decorators属性を削除しIntlProviderのみを使用 ([#6237](https://github.com/se4weed/smarthr-ui/issues/6237)) ([2637cfd](https://github.com/se4weed/smarthr-ui/commit/2637cfd68121da047e5335b526fd0c5431d3d0a0))
+* **Textarea:** decorators属性を削除 ([#6232](https://github.com/se4weed/smarthr-ui/issues/6232)) ([d37c904](https://github.com/se4weed/smarthr-ui/commit/d37c904cecf1080ba351d912e6ae5c98eebd1890))
+* **ThCheckbox:** decorators属性を削除しIntlProviderのみを使用 ([#6235](https://github.com/se4weed/smarthr-ui/issues/6235)) ([3ccc2c7](https://github.com/se4weed/smarthr-ui/commit/3ccc2c77927f2e615b96314b7903f497de786a00))
+* コンポーネントサイズ指定を大文字に統一 ([#6239](https://github.com/se4weed/smarthr-ui/issues/6239)) ([502409b](https://github.com/se4weed/smarthr-ui/commit/502409bc942ad7ed6129f32ce741a6727d4cf1cb))
+
 ## [95.0.0](https://github.com/kufu/smarthr-ui/compare/smarthr-ui-v94.0.0...smarthr-ui-v95.0.0) (2026-05-21)
 
 
